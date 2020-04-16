@@ -57,7 +57,7 @@ const WithStaticProps = ({ items }: Props) => (
 // };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch("http://localhost:1337/models");
+  const res = await fetch(process.env.STRAPI_URL);
   const items = await res.json();
 
   return {

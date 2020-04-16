@@ -17,7 +17,7 @@ const List: React.FunctionComponent<Props> = ({ items }) => (
     `}</style>
     {items.map((item) => (
       <li id="list" key={item.id}>
-        <ListItem data={item} />
+        <ListItem {...item} />
       </li>
     ))}
   </ul>
